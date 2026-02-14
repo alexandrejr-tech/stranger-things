@@ -1,0 +1,1012 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Benguiat";
+  src: url("/fontes/Benguiat Bold.ttf");
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+}
+
+body {
+  background-color: #0c0102;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Poppins";
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4vw;
+  position: absolute;
+  z-index: 9;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  padding: 7vw;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 500;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  gap: 12px;
+  border: none;
+  outline: none;
+  padding: 16px 0px;
+  border-bottom: 1px solid white;
+}
+
+/* PRELOADER */
+#preloader {
+  width: 100%;
+  height: 100vh;
+  background-color: #0c0102;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#preloader svg {
+  width: 40vw;
+  height: auto;
+}
+
+#preloader svg path {
+  fill: rgba(168, 19, 19, 0.364);
+  stroke: rgb(168, 19, 19);
+  stroke-dasharray: 640;
+  stroke-dashoffset: 640;
+}
+
+.bgMonstro {
+  background-image: url("/imagens/bg-sec2.webp");
+  background-position: center;
+  background-size: cover;
+  z-index: 2;
+  position: relative;
+  background-color: #0c0102;
+}
+
+#smooth-wrapper {
+  overflow: hidden;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* HERO */
+.hero {
+  background-position: 50% 0%;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7vw 7vw 7vw;
+  position: relative;
+}
+
+.hero picture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
+.hero picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.hero .esquerda,
+.hero .direita {
+  width: 30%;
+  z-index: 3;
+}
+
+.hero .esquerda h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+.hero .esquerda h1 {
+  font-size: 3.7vw;
+  font-family: "Benguiat";
+}
+
+.hero .direita {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.hero .direita p {
+  font-size: 2vw;
+  margin-bottom: 32px;
+  text-align: end;
+}
+
+.hero:before {
+  content: "";
+  background: linear-gradient(180deg, rgba(12, 1, 2, 0) 0%, #0c0102 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+}
+
+/* SEÇÃO CIDADE */
+.secaoCidade {
+  flex-direction: column;
+  position: relative;
+}
+
+.secaoCidade .titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.secaoCidade .cards {
+  margin-top: 52px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.secaoCidade .cards .card {
+  width: 32%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.secaoCidade .cards .card:hover {
+  transform: scale(1.02);
+}
+
+/* SEÇÃO DEPOIMENTOS */
+.secaoDepoimentos {
+  flex-direction: column;
+}
+
+.secaoDepoimentos .logotipos {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.secaoDepoimentos .depoimentos {
+  margin-top: 62px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.secaoDepoimentos .depoimentos .depoimento {
+  width: 31%;
+}
+
+/* SEÇÃO OBRIGADO */
+.secaoObrigado {
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: #0c0102;
+  z-index: 2;
+}
+
+.secaoObrigado h2 {
+  margin-bottom: 40px;
+}
+
+.secaoObrigado ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/imagens/bg-footer.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+footer .conteudoFooter {
+  display: flex;
+  width: 100%;
+  padding: 7vw;
+}
+
+footer .conteudoFooter .logoFooter {
+  width: 30%;
+}
+
+footer .conteudoFooter .logoFooter h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 4px;
+}
+
+footer .conteudoFooter .logoFooter h2 {
+  font-size: 3.7vw;
+  font-family: "Benguiat";
+}
+
+footer .conteudoFooter .secoesFooter {
+  display: flex;
+  flex: 1;
+  justify-content: end;
+  gap: 6%;
+  align-items: end;
+}
+
+footer .conteudoFooter .secoesFooter h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+footer .conteudoFooter .secoesFooter .social ul {
+  display: flex;
+  gap: 12px;
+}
+
+footer .logotiposFooter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4vw;
+}
+
+footer .textoInfinito {
+  width: max-content;
+  display: flex;
+}
+
+footer .textoInfinito h3 {
+  color: rgb(191, 191, 191);
+  font-size: 12vw;
+  font-family: "Benguiat", sans-serif;
+  mix-blend-mode: color-dodge;
+  animation: textoInfinito 10s infinite linear;
+  padding-left: 8vw;
+}
+
+@keyframes textoInfinito {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* LINK STYLES */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* LOGIN PAGE */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0c0102;
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 8px;
+  font-family: "Benguiat";
+  color: #E92A2D;
+}
+
+.login-container .subtitle {
+  text-align: center;
+  margin-bottom: 32px;
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+
+.login-container label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.login-container input:focus {
+  border-color: #E92A2D;
+}
+
+.login-container .btn-primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #E92A2D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container .btn-primary:hover {
+  background-color: #c42225;
+}
+
+.login-container .toggle-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.login-container .toggle-text span {
+  color: #E92A2D;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-container .error-message {
+  background-color: rgba(233, 42, 45, 0.15);
+  color: #ff6b6b;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+/* CITY DETAILS PAGE */
+.city-details {
+  min-height: 100vh;
+  background-color: #0c0102;
+  padding: calc(8vw + 80px) 7vw 7vw;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  background: none;
+  border: none;
+  border-bottom: none;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+}
+
+.back-link:hover {
+  opacity: 1;
+}
+
+.city-details .city-hero {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.city-details .city-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-details .city-info h1 {
+  font-family: "Benguiat";
+  font-size: 3vw;
+  margin-bottom: 16px;
+}
+
+.city-details .city-info .country {
+  font-size: 18px;
+  opacity: 0.6;
+  margin-bottom: 32px;
+}
+
+.city-details .events-list {
+  margin-top: 40px;
+}
+
+.city-details .events-list h2 {
+  margin-bottom: 24px;
+}
+
+.city-details .event-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.3s;
+}
+
+.city-details .event-card:hover {
+  border-color: rgba(233, 42, 45, 0.4);
+}
+
+.city-details .event-card .event-info h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.city-details .event-card .event-info p {
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.city-details .event-card .event-price {
+  text-align: right;
+}
+
+.city-details .event-card .event-price .price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #E92A2D;
+}
+
+.city-details .event-card .event-price .btn-book {
+  margin-top: 8px;
+  padding: 10px 24px;
+  background-color: #E92A2D;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.city-details .event-card .event-price .btn-book:hover {
+  background-color: #c42225;
+}
+
+/* MY BOOKINGS PAGE */
+.my-bookings {
+  min-height: 100vh;
+  background-color: #0c0102;
+  padding: calc(8vw + 80px) 7vw 7vw;
+}
+
+.my-bookings h1 {
+  font-family: "Benguiat";
+  font-size: 3vw;
+  margin-bottom: 40px;
+}
+
+.my-bookings .booking-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.my-bookings .booking-card .booking-info h3 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.my-bookings .booking-card .booking-info p {
+  opacity: 0.6;
+  font-size: 14px;
+}
+
+.my-bookings .booking-card .booking-status {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.my-bookings .booking-card .booking-status.confirmed {
+  background-color: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+.my-bookings .booking-card .booking-status.pending {
+  background-color: rgba(234, 179, 8, 0.15);
+  color: #eab308;
+}
+
+.my-bookings .booking-card .booking-status.cancelled {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: #ef4444;
+}
+
+.my-bookings .empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  opacity: 0.5;
+}
+
+/* BOOKING MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal-content {
+  background-color: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 32px;
+  width: 100%;
+  max-width: 440px;
+}
+
+.modal-content h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.modal-content .booking-field {
+  margin-bottom: 20px;
+}
+
+.modal-content .booking-field label {
+  display: block;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+.modal-content .booking-field input[type="date"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-content .booking-field input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.modal-content .time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal-content .time-slot {
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: auto;
+  height: auto;
+}
+
+.modal-content .time-slot:hover {
+  border-color: #E92A2D;
+}
+
+.modal-content .time-slot.active {
+  background-color: #E92A2D;
+  border-color: #E92A2D;
+  color: white;
+}
+
+.modal-content .quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.modal-content .quantity-selector button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 0;
+}
+
+.modal-content .quantity-selector span {
+  font-size: 24px;
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
+}
+
+.modal-content .total {
+  font-size: 20px;
+  margin-bottom: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-content .total .price {
+  color: #E92A2D;
+  font-weight: 700;
+}
+
+.modal-content .modal-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.modal-content .modal-actions button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+}
+
+.modal-content .modal-actions .btn-cancel {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.modal-content .modal-actions .btn-confirm {
+  background-color: #E92A2D;
+  color: white;
+}
+
+/* NAV HEADER */
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+header nav a {
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+header nav a:hover {
+  opacity: 1;
+}
+
+header .btn-login {
+  padding: 8px 20px;
+  background-color: #E92A2D;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1500px) {
+  .secaoCidade {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .secaoCidade .cards .card {
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    padding: 4vw;
+  }
+  h2 {
+    font-size: 6vw;
+  }
+
+  header h2 {
+    font-size: 28px;
+  }
+
+  header {
+    align-items: center;
+  }
+
+  header nav {
+    gap: 12px;
+  }
+
+  header nav a {
+    font-size: 12px;
+  }
+
+  header nav img {
+    height: 20px;
+  }
+
+  header .btn-login {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 26% 4vw 0;
+  }
+
+  .hero .esquerda,
+  .hero .direita {
+    width: 100%;
+  }
+
+  .hero .esquerda h3,
+  .hero .esquerda h1 {
+    text-align: center;
+  }
+
+  .hero .esquerda h1 {
+    font-size: 12vw;
+  }
+
+  .hero .direita {
+    align-items: start;
+  }
+
+  .hero .direita p {
+    font-size: 5.5vw;
+    text-align: start;
+    margin-bottom: 16px;
+  }
+
+  .secaoCidade {
+    margin-top: 80px;
+  }
+
+  .secaoCidade button {
+    display: none;
+  }
+
+  .secaoCidade .cards {
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .secaoCidade .cards .card {
+    width: 100%;
+  }
+
+  .secaoDepoimentos .logotipos img:nth-child(1),
+  .secaoDepoimentos .logotipos img:nth-child(3) {
+    width: 20%;
+  }
+
+  .secaoDepoimentos .logotipos img:nth-child(2) {
+    width: 40%;
+  }
+
+  .secaoDepoimentos .depoimentos {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .secaoDepoimentos .depoimentos .depoimento {
+    width: 100%;
+  }
+
+  .secaoObrigado {
+    margin: 40px 0px 60px;
+    overflow: hidden;
+  }
+
+  .secaoObrigado h2 {
+    text-align: center;
+  }
+
+  .secaoObrigado ul {
+    width: max-content;
+    gap: 48px;
+    animation: scrollCities 10s linear infinite;
+  }
+
+  @keyframes scrollCities {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  footer {
+    padding-top: 40px;
+  }
+
+  footer .conteudoFooter {
+    padding: 4vw;
+    flex-direction: column;
+  }
+
+  footer .conteudoFooter .logoFooter {
+    width: 100%;
+  }
+
+  footer .conteudoFooter .logoFooter h2,
+  footer .conteudoFooter .logoFooter h3 {
+    text-align: center;
+  }
+
+  footer .conteudoFooter .logoFooter h2 {
+    font-size: 12vw;
+  }
+
+  footer .conteudoFooter .secoesFooter {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+  }
+
+  footer .conteudoFooter .secoesFooter .social {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0px 32px;
+  }
+
+  footer .conteudoFooter .secoesFooter .institucional {
+    width: 40%;
+  }
+
+  footer .conteudoFooter .secoesFooter .parceiro {
+    width: 50%;
+  }
+
+  footer .conteudoFooter .secoesFooter .parceiro img {
+    width: 100%;
+  }
+
+  footer .logotiposFooter {
+    margin-top: 40px;
+  }
+
+  footer .textoInfinito h3 {
+    font-size: 20vw;
+  }
+
+  /* RESPONSIVE PAGES */
+  .city-details {
+    padding: calc(8vw + 60px) 4vw 4vw;
+  }
+
+  .city-details .city-info h1 {
+    font-size: 8vw;
+  }
+
+  .city-details .city-hero {
+    height: 250px;
+  }
+
+  .city-details .event-card {
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+  }
+
+  .my-bookings {
+    padding: calc(8vw + 60px) 4vw 4vw;
+  }
+
+  .my-bookings h1 {
+    font-size: 8vw;
+  }
+
+  .my-bookings .booking-card {
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+  }
+}
