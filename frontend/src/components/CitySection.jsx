@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
@@ -15,7 +14,6 @@ const fixedCities = [
 ];
 
 export default function CitySection() {
-  const { user } = useAuth();
   const [cityIds, setCityIds] = useState({});
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
@@ -73,7 +71,7 @@ export default function CitySection() {
     <section className="secaoCidade" ref={sectionRef}>
       <div className="titulo">
         <h2 ref={titleRef}>ESCOLHA SUA CIDADE</h2>
-        <button>
+        <button onClick={() => navigate("/login")}>
           ESCOLHA SUA CIDADE
           <img src="/imagens/seta-botao.svg" alt="" />
         </button>
@@ -84,13 +82,7 @@ export default function CitySection() {
             key={city.name}
             className="card"
             style={{ backgroundImage: `url(${city.image})`, cursor: "pointer" }}
-            onClick={() => {
-              if (!user) {
-                navigate("/login");
-              } else if (cityIds[city.name]) {
-                navigate(`/cidade/${cityIds[city.name]}`);
-              }
-            }}
+            onClick={() => cityIds[city.name] && navigate(`/cidade/${cityIds[city.name]}`)}
           >
             <h3>{city.name}</h3>
             <p>INGRESSOS DISPONÍVEIS</p>

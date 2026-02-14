@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
@@ -6,6 +7,7 @@ import { SplitText } from "gsap/SplitText";
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Hero() {
+  const navigate = useNavigate();
   const heroRef = useRef(null);
   const textRef = useRef(null);
   const pic1Ref = useRef(null);
@@ -69,7 +71,7 @@ export default function Hero() {
           poderes e vire o herói de<br />
           sua própria aventura!
         </p>
-        <button className="botaoPrincipal">
+        <button className="botaoPrincipal" onClick={() => navigate("/login")}>
           ESCOLHA SUA CIDADE
           <img src="/imagens/seta-botao.svg" alt="" />
         </button>
