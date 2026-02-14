@@ -26,6 +26,10 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "ok", message: "Stranger Things API rodando!" });
 });
 
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
-});
+if (process.env.VERCEL !== "1") {
+  app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
+  });
+}
+
+module.exports = app;
