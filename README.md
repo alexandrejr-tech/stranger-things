@@ -1,6 +1,6 @@
 # Stranger Things Experience
 
-Uma aplicacao full-stack inspirada na experiencia imersiva de Stranger Things, onde usuarios podem explorar cidades, reservar ingressos e gerenciar suas reservas. Desenvolvido com React, Node.js e Supabase.
+Uma aplicação full-stack inspirada na experiência imersiva de Stranger Things, onde usuários podem explorar cidades, reservar ingressos e gerenciar suas reservas. Desenvolvido com React, Node.js e Supabase.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
@@ -11,15 +11,14 @@ Uma aplicacao full-stack inspirada na experiencia imersiva de Stranger Things, o
 
 ## Sobre o Projeto
 
-O **Stranger Things Experience** simula uma plataforma de venda de ingressos para experiencias imersivas em diferentes cidades ao redor do mundo. O projeto comecou como uma landing page estatica e foi transformado em uma aplicacao full-stack completa.
+O **Stranger Things Experience** simula uma plataforma de venda de ingressos para experiências imersivas em diferentes cidades ao redor do mundo. O projeto começou como uma landing page estática e foi transformado em uma aplicação full-stack completa.
 
 ### Funcionalidades
-
-- Landing page com animacoes cinematograficas (GSAP + ScrollSmoother)
-- Sistema de autenticacao (registro e login com JWT)
-- Catalogo de cidades com experiencias disponiveis
-- Reserva de ingressos com selecao de data e horario
-- Validacao de datas e horarios passados
+- Landing page com animações cinematográficas (GSAP + ScrollSmoother)
+- Sistema de autenticação (registro e login com JWT)
+- Catálogo de cidades com experiências disponíveis
+- Reserva de ingressos com seleção de data e horário
+- Validação de datas e horários passados
 - Painel "Minhas Reservas" para acompanhar reservas
 - Layout responsivo (desktop e mobile)
 - Carrossel de cidades no mobile
@@ -30,20 +29,20 @@ O **Stranger Things Experience** simula uma plataforma de venda de ingressos par
 
 ### Frontend
 - **React 19** com Vite
-- **React Router v7** para navegacao SPA
-- **GSAP** (ScrollTrigger, ScrollSmoother, SplitText) para animacoes
+- **React Router v7** para navegação SPA
+- **GSAP** (ScrollTrigger, ScrollSmoother, SplitText) para animações
 - **Axios** para chamadas HTTP
 - **CSS** puro com media queries responsivas
 
 ### Backend
 - **Node.js** com Express
-- **JWT** para autenticacao
+- **JWT** para autenticação
 - **bcryptjs** para hash de senhas
 - **Supabase** (PostgreSQL) como banco de dados
 
 ### Infraestrutura
 - **Vercel** (frontend + backend)
-- **Supabase** (banco de dados e autenticacao)
+- **Supabase** (banco de dados e autenticação)
 
 ---
 
@@ -53,9 +52,9 @@ O **Stranger Things Experience** simula uma plataforma de venda de ingressos par
 stranger-things/
 ├── frontend/                # React (Vite)
 │   ├── public/
-│   │   └── imagens/         # Assets estaticos
+│   │   └── imagens/         # Assets estáticos
 │   ├── src/
-│   │   ├── components/      # Componentes reutilizaveis
+│   │   ├── components/      # Componentes reutilizáveis
 │   │   │   ├── Header.jsx
 │   │   │   ├── Hero.jsx
 │   │   │   ├── CitySection.jsx
@@ -64,14 +63,14 @@ stranger-things/
 │   │   │   ├── BookingModal.jsx
 │   │   │   ├── Preloader.jsx
 │   │   │   └── Footer.jsx
-│   │   ├── pages/           # Paginas da aplicacao
+│   │   ├── pages/           # Páginas da aplicação
 │   │   │   ├── Home.jsx
 │   │   │   ├── Login.jsx
 │   │   │   ├── CityDetails.jsx
 │   │   │   └── MyBookings.jsx
 │   │   ├── context/         # Context API
 │   │   │   └── AuthContext.jsx
-│   │   ├── services/        # Configuracao de API
+│   │   ├── services/        # Configuração de API
 │   │   │   └── api.js
 │   │   └── styles/
 │   │       └── style.css
@@ -87,7 +86,7 @@ stranger-things/
 │   │   ├── middleware/
 │   │   │   └── auth.js      # Middleware JWT
 │   │   ├── config/
-│   │   │   └── supabase.js  # Conexao com banco
+│   │   │   └── supabase.js  # Conexão com banco
 │   │   └── server.js
 │   └── package.json
 │
@@ -98,13 +97,13 @@ stranger-things/
 
 ## API Endpoints
 
-| Metodo | Rota | Descricao | Auth |
+| Método | Rota | Descrição | Auth |
 |--------|------|-----------|------|
-| `POST` | `/api/auth/register` | Criar conta | Nao |
-| `POST` | `/api/auth/login` | Fazer login | Nao |
-| `GET` | `/api/cities` | Listar cidades | Nao |
-| `GET` | `/api/cities/:id` | Detalhes da cidade | Nao |
-| `GET` | `/api/testimonials` | Listar depoimentos | Nao |
+| `POST` | `/api/auth/register` | Criar conta | Não |
+| `POST` | `/api/auth/login` | Fazer login | Não |
+| `GET` | `/api/cities` | Listar cidades | Não |
+| `GET` | `/api/cities/:id` | Detalhes da cidade | Não |
+| `GET` | `/api/testimonials` | Listar depoimentos | Não |
 | `POST` | `/api/bookings` | Criar reserva | Sim |
 | `GET` | `/api/bookings` | Minhas reservas | Sim |
 
@@ -112,13 +111,13 @@ stranger-things/
 
 ## Como Rodar Localmente
 
-### Pre-requisitos
+### Pré-requisitos
 - Node.js 18+
 - Conta no [Supabase](https://supabase.com)
 
-### 1. Clone o repositorio
+### 1. Clone o repositório
 ```bash
-git clone https://github.com/SEU_USER/stranger-things.git
+git clone https://github.com/alexandrejr-tech/stranger-things.git
 cd stranger-things
 ```
 
@@ -143,7 +142,7 @@ cd ../frontend
 npm install
 ```
 
-Crie o arquivo `.env` na pasta `frontend/` (opcional, para apontar ao backend em producao):
+Crie o arquivo `.env` na pasta `frontend/` (opcional, para apontar ao backend em produção):
 ```env
 VITE_API_URL=http://localhost:3001
 ```
@@ -167,9 +166,9 @@ Acesse **http://localhost:5173**
 
 O projeto utiliza 4 tabelas no Supabase:
 
-- **cities** — Cidades com experiencias disponiveis
-- **events** — Eventos vinculados a cada cidade (titulo, preco, capacidade)
-- **bookings** — Reservas dos usuarios (data, horario, quantidade, status)
+- **cities** — Cidades com experiências disponíveis
+- **events** — Eventos vinculados a cada cidade (título, preço, capacidade)
+- **bookings** — Reservas dos usuários (data, horário, quantidade, status)
 - **testimonials** — Depoimentos de visitantes
 
 ---
@@ -177,21 +176,21 @@ O projeto utiliza 4 tabelas no Supabase:
 ## Screenshots
 
 ### Landing Page
-> Hero com animacoes GSAP e scroll suave
+> Hero com animações GSAP e scroll suave
 
 ### Reserva de Ingressos
-> Selecao de data, horario e quantidade com validacao em tempo real
+> Seleção de data, horário e quantidade com validação em tempo real
 
 ### Minhas Reservas
-> Painel do usuario com historico de reservas
+> Painel do usuário com histórico de reservas
 
 ---
 
 ## Aprendizados
 
-- Migracao de projeto estatico para aplicacao full-stack
-- Integracao React com animacoes GSAP (ScrollSmoother, SplitText)
-- Autenticacao JWT com middleware no Express
+- Migração de projeto estático para aplicação full-stack
+- Integração React com animações GSAP (ScrollSmoother, SplitText)
+- Autenticação JWT com middleware no Express
 - Modelagem de banco de dados relacional (PostgreSQL via Supabase)
 - Deploy de monorepo com frontend e backend separados na Vercel
 - Responsividade e UX mobile (carrossel CSS, layout adaptativo)
